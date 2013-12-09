@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+"use strict"
+$ = @jQuery
+
+###
+${1:comment}
+###
+${0}
+]]></content>
+  <tabTrigger>init</tabTrigger>
+  <scope>source.coffee</scope>
+</snippet>
