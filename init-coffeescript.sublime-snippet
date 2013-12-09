@@ -6,8 +6,9 @@ $ = @jQuery
 ###
 ${1:comment}
 ###
-${0}
+${2:code}
 ]]></content>
   <tabTrigger>init</tabTrigger>
   <scope>source.coffee</scope>
+  <description>Init for CoffeeScript</description>
 </snippet>
