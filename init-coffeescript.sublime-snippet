@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
 "use strict"
-$ = @jQuery
+\$ = @jQuery
 
 ###
 ${1:comment}
