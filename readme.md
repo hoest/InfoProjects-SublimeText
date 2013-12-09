@@ -24,7 +24,7 @@ in Sublime Text.
 
 `init` zorgt voor onderstaande stukje code:
 
-```
+```coffee
 "use strict"
 $ = @jQuery
 
