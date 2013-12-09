@@ -10,7 +10,7 @@ volgende:
 Plak in het invoer-veld deze URL:
 
 ```
-http://ip-gitlab.infoprojects.local/intern/infoprojects-sublimetext.git
+https://github.com/hoest/InfoProjects-SublimeText.git
 ```
 
 Installeer na het uitvoeren van deze actie het pakket
