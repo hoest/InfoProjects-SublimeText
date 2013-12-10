@@ -20,6 +20,18 @@ Installeer na het uitvoeren van deze actie het pakket
 Dit pakket bevat wat handigheidjes voor bij InfoProjects i.c.m. het werken
 in Sublime Text.
 
+### XSLT snippets
+
+`tcom` zorgt voor onderstaande stukje code:
+
+```xsl
+<!--
+  ///////////////////////////////////////////////////////////////////////////
+  ${1:omschrijving}
+  ///////////////////////////////////////////////////////////////////////////
+-->
+```
+
 ### CoffeeScript snippets
 
 `init` zorgt voor onderstaande stukje code:

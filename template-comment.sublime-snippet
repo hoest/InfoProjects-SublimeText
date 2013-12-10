@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+	<!--
+		///////////////////////////////////////////////////////////////////////////
+		${1:omschrijving}
+		///////////////////////////////////////////////////////////////////////////
+	-->
+]]></content>
+	<tabTrigger>tcom</tabTrigger>
+	<scope>text.xml.xsl</scope>
+	<description>Commentaar bij XSL template</description>
+</snippet>
