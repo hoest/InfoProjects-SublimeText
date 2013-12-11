@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>log</string>
+	</array>
+	<key>name</key>
+	<string>IPROX Log bestanden</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>elapsed</string>
+			<key>match</key>
+			<string>^\d+</string>
+			<key>name</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>datetime</string>
+			<key>match</key>
+			<string>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}</string>
+			<key>name</key>
+			<string>entity.name.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>scope</string>
+			<key>match</key>
+			<string>\[[A-Z]+\]</string>
+			<key>name</key>
+			<string>support.constant</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>library</string>
+			<key>match</key>
+			<string> \([A-Za-z\.]+\)</string>
+			<key>name</key>
+			<string>variable.parameter</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>error</string>
+			<key>match</key>
+			<string>( Exception(.*)|at (.*))</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.iprox-log</string>
+	<key>uuid</key>
+	<string>e77fde70-6266-11e3-90e3-782bcbc9f76e</string>
+</dict>
+</plist>
