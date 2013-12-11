@@ -29,7 +29,7 @@ IPROX.log bestanden worden met kleurtjes getoond.
 `prop` zorgt voor onderstaande stukje code:
 
 ```xml
-<prop name="${1:name}" value="{$2:value}" />
+<prop name="${1:name}" value="${2:value}" />
 ```
 
 ### XSLT snippets
