@@ -46,7 +46,7 @@
 			<key>comment</key>
 			<string>error</string>
 			<key>match</key>
-			<string>( Exception(.*)|at (.*))</string>
+			<string>( Exception(.*)|(\t|\s+)at (.*))</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
