@@ -20,6 +20,10 @@ Installeer na het uitvoeren van deze actie het pakket
 Dit pakket bevat wat handigheidjes voor bij InfoProjects i.c.m. het werken
 in Sublime Text.
 
+### Syntax highlight
+
+IPROX.log bestanden worden met kleurtjes getoond.
+
 ### XSLT snippets
 
 `tcom` zorgt voor onderstaande stukje code:
