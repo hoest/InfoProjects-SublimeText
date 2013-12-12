@@ -50,6 +50,14 @@
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
+		<dict>
+			<key>comment</key>
+			<string>settings</string>
+			<key>match</key>
+			<string>Settings initialized</string>
+			<key>name</key>
+			<string>storage</string>
+		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>text.iprox-log</string>
