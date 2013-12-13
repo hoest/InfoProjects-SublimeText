@@ -2,9 +2,11 @@ import os
 import sublime
 import sublime_plugin
 
+settings = sublime.load_settings("InfoProjects-SublimeText.sublime-settings")
+
 class BuildProjectCommand(sublime_plugin.WindowCommand):
-  def run(self, deploy=False, cleanup=False, auto_pull=False):
-    self.auto_pull = auto_pull
+  def run(self, deploy=False, cleanup=False):
+    self.auto_pull = settings.get("auto_pull_tools", False)
     self.cleanup = cleanup
     self.deploy = deploy
     self.view = self.window.active_view()

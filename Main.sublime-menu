@@ -1,0 +1,38 @@
+[
+  {
+    "caption": "Preferences",
+    "mnemonic": "n",
+    "id": "preferences",
+    "children":
+    [
+      {
+        "caption": "Package Settings",
+        "mnemonic": "P",
+        "id": "package-settings",
+        "children":
+        [
+          {
+            "caption": "InfoProjects",
+            "children":
+            [
+              {
+                "caption": "Settings – Default",
+                "command": "open_file", "args":
+                {
+                  "file": "${packages}/InfoProjects-SublimeText/InfoProjects-SublimeText.sublime-settings"
+                }
+              },
+              {
+                "caption": "Settings – User",
+                "command": "open_file", "args":
+                {
+                  "file": "${packages}/User/InfoProjects-SublimeText.sublime-settings"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
