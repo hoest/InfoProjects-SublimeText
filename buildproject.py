@@ -13,7 +13,7 @@ class BuildProjectCommand(sublime_plugin.WindowCommand):
 
   def on_done(self, buildcmd="all"):
     sublime.status_message("")
-    working_dir = os.path.dirname(os.path.abspath("."))
+    working_dir = os.path.dirname(self.view.file_name())
     psscript = "Invoke-Build%s.ps1" % "Develop" if self.deploy else ""
     psargs = "-p%s" % " -k" if not self.cleanup else ""
 
