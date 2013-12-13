@@ -1,0 +1,13 @@
+[
+  {
+    "keys": [ "ctrl+super+b" ],
+    "command": "build_project"
+  },
+  {
+    "keys": [ "alt+super+b" ],
+    "command": "build_project",
+    "args": {
+      "deploy": true
+    }
+  }
+]
