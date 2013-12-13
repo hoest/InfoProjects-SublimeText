@@ -6,7 +6,6 @@ settings = sublime.load_settings("InfoProjects-SublimeText.sublime-settings")
 
 class BuildProjectCommand(sublime_plugin.WindowCommand):
   def run(self, deploy=False, cleanup=False):
-    self.auto_pull = settings.get("auto_pull_tools", False)
     self.cleanup = cleanup
     self.deploy = deploy
     self.view = self.window.active_view()
@@ -26,7 +25,7 @@ class BuildProjectCommand(sublime_plugin.WindowCommand):
       psscript = "Invoke-BuildDevelop.ps1"
 
     psargs = ""
-    if self.auto_pull:
+    if settings.get("auto_pull_tools", False):
       psargs += " -p"
     if self.deploy and not self.cleanup:
       psargs += " -k"
