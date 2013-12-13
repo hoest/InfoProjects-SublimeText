@@ -22,7 +22,7 @@ in Sublime Text.
 
 ### Build plugin
 
-Met behulp van `CTRL+WINDOWS+B` krijg je toegang tot de normale `Invoke-Build.ps1`
+Met behulp van `CTRL+WINDOWS+B` krijg je toegang tot de normale `Invoke-Build.ps1 -p`
 manier die je normaliter vanuit PowerShell uitvoert. Via het invoer-veld dat
 gepresenteerd wordt, kun je de build-taak invoeren.
 
@@ -53,9 +53,12 @@ Of je kunt onderstaande opnemen in je `$PROFILE`:
 Set-Content Env:Path "$Env:Path;$(gc 'env:ProgramFiles(x86)')\git\bin;C:\development\intern\powershell\scripts\"
 ```
 
-Overigens kun je met behulp van `ALT+WINDOWS+B` je hele ontwikkel-omgeving
-schoon optuigen, het script `Invoke-BuildDevelop` wordt dan namelijk uitgevoerd.
+Met behulp van `ALT+WINDOWS+B` je hele ontwikkel-omgeving builden en deployen,
+het script `Invoke-BuildDevelop.ps1 -p -k` wordt dan namelijk uitgevoerd.
 Met dit commando is geen invoer noodzakelijk.
+
+Overigens kun je met behulp van `CTRL+ALT+WINDOWS+B` je hele ontwikkel-omgeving
+schoon optuigen, het script `Invoke-BuildDevelop.ps1 -p` wordt dan namelijk uitgevoerd.
 
 ### Syntax highlight
 

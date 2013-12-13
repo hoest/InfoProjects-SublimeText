@@ -1,7 +1,8 @@
 import os, sublime, sublime_plugin
 
 class BuildProjectCommand(sublime_plugin.WindowCommand):
-  def run(self, deploy=False):
+  def run(self, deploy=False, cleanup=False):
+    self.cleanup = cleanup
     self.deploy = deploy
 
     if self.deploy:
@@ -14,10 +15,11 @@ class BuildProjectCommand(sublime_plugin.WindowCommand):
     sublime.status_message("")
     working_dir = os.path.dirname(os.path.abspath("."))
     psscript = "Invoke-Build%s.ps1" % "Develop" if self.deploy else ""
+    psargs = "-p%s" % " -k" if not self.cleanup else ""
 
     if "\\src\\" in working_dir:
       cmd = {
-        "cmd": ["powershell", "-NoLogo", psscript, "-p", buildcmd],
+        "cmd": ["powershell", "-NoLogo", psscript, psargs, buildcmd],
         "working_dir": working_dir
       }
 

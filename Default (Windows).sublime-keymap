@@ -9,5 +9,13 @@
     "args": {
       "deploy": true
     }
+  },
+  {
+    "keys": [ "alt+ctrl+super+b" ],
+    "command": "build_project",
+    "args": {
+      "deploy": true,
+      "cleanup": true
+    }
   }
 ]
