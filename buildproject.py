@@ -1,9 +1,12 @@
-import os, sublime, sublime_plugin
+import os
+import sublime
+import sublime_plugin
 
 class BuildProjectCommand(sublime_plugin.WindowCommand):
   def run(self, deploy=False, cleanup=False):
     self.cleanup = cleanup
     self.deploy = deploy
+    self.view = self.window.active_view()
 
     if self.deploy:
       self.on_done()
@@ -14,8 +17,14 @@ class BuildProjectCommand(sublime_plugin.WindowCommand):
   def on_done(self, buildcmd="all"):
     sublime.status_message("")
     working_dir = os.path.dirname(self.view.file_name())
-    psscript = "Invoke-Build%s.ps1" % "Develop" if self.deploy else ""
-    psargs = "-p%s" % " -k" if not self.cleanup else ""
+
+    psscript = "Invoke-Build.ps1"
+    if self.deploy:
+      psscript = "Invoke-BuildDevelop.ps1"
+
+    psargs = "-p"
+    if self.deploy and not self.cleanup:
+      psargs += " -k"
 
     if "\\src\\" in working_dir:
       cmd = {
