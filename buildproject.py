@@ -3,7 +3,8 @@ import sublime
 import sublime_plugin
 
 class BuildProjectCommand(sublime_plugin.WindowCommand):
-  def run(self, deploy=False, cleanup=False):
+  def run(self, deploy=False, cleanup=False, auto_pull=False):
+    self.auto_pull = auto_pull
     self.cleanup = cleanup
     self.deploy = deploy
     self.view = self.window.active_view()
@@ -22,7 +23,9 @@ class BuildProjectCommand(sublime_plugin.WindowCommand):
     if self.deploy:
       psscript = "Invoke-BuildDevelop.ps1"
 
-    psargs = "-p"
+    psargs = ""
+    if self.auto_pull:
+      psargs += " -p"
     if self.deploy and not self.cleanup:
       psargs += " -k"
 
