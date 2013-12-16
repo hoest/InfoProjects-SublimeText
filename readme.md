@@ -60,6 +60,10 @@ Met dit commando is geen invoer noodzakelijk.
 Overigens kun je met behulp van `CTRL+ALT+WINDOWS+B` je hele ontwikkel-omgeving
 schoon optuigen, het script `Invoke-BuildDevelop.ps1` wordt dan namelijk uitgevoerd.
 
+Wanneer je bijvoorbeeld [PoshGIT](http://dahlbyk.github.io/posh-git/) hebt geïnstalleerd,
+kun je met behulp van de setting `auto_pull_tools` op `true` het argument `-p` er bij krijgen,
+waardoor je `tools` eerst even geüpdatet worden.
+
 ### Syntax highlight
 
 IPROX.log bestanden worden met kleurtjes getoond.
