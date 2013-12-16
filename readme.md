@@ -22,14 +22,14 @@ in Sublime Text.
 
 ### Build plugin
 
-Met behulp van `CTRL+WINDOWS+B` krijg je toegang tot de normale `Invoke-Build.ps1 -p`
+Met behulp van `CTRL+WINDOWS+B` krijg je toegang tot de normale `Invoke-Build.ps1`
 manier die je normaliter vanuit PowerShell uitvoert. Via het invoer-veld dat
 gepresenteerd wordt, kun je de build-taak invoeren.
 
 Bijvoorbeeld, wanneer je `less,coffee` invoert, zal deze taak uitgevoerd worden:
 
 ```
-powershell -NoLogo -NoProfile Invoke-Build.ps1 -p less,coffee
+powershell -NoLogo -NoProfile Invoke-Build.ps1 less,coffee
 ```
 
 Wanneer je het invoer-veld leeg laat, zal de standaard build-taak `all` uitgevoerd
@@ -54,11 +54,11 @@ Set-Content Env:Path "$Env:Path;$(gc 'env:ProgramFiles(x86)')\git\bin;C:\develop
 ```
 
 Met behulp van `ALT+WINDOWS+B` je hele ontwikkel-omgeving builden en deployen,
-het script `Invoke-BuildDevelop.ps1 -p -k` wordt dan namelijk uitgevoerd.
+het script `Invoke-BuildDevelop.ps1 -k` wordt dan namelijk uitgevoerd.
 Met dit commando is geen invoer noodzakelijk.
 
 Overigens kun je met behulp van `CTRL+ALT+WINDOWS+B` je hele ontwikkel-omgeving
-schoon optuigen, het script `Invoke-BuildDevelop.ps1 -p` wordt dan namelijk uitgevoerd.
+schoon optuigen, het script `Invoke-BuildDevelop.ps1` wordt dan namelijk uitgevoerd.
 
 ### Syntax highlight
 
@@ -71,6 +71,10 @@ IPROX.log bestanden worden met kleurtjes getoond.
 ```xml
 <prop name="${1:name}" value="${2:value}" />
 ```
+
+Wanneer je bijvoorbeeld [PoshGIT](http://dahlbyk.github.io/posh-git/) hebt geïnstalleerd,
+kun je met behulp van de setting `auto_pull_tools` op `true` het argument `-p` er bij krijgen,
+waardoor je `tools` eerst even geüpdatet worden.
 
 ### XSLT snippets
 
